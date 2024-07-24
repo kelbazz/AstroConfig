@@ -1,18 +1,15 @@
-if true then return end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
--- This will run last in the setup process and is a good place to configure
--- things like custom filetypes. This just pure lua so anything that doesn't
--- fit in the normal config locations above can go here
-
--- Set up custom filetypes
-vim.filetype.add {
-  extension = {
-    foo = "fooscript",
-  },
-  filename = {
-    ["Foofile"] = "fooscript",
-  },
-  pattern = {
-    ["~/%.config/foo/.*"] = "fooscript",
-  },
+local SENTENCES = {
+  "Welcome back Kelbaz!",
+  "Coding time!",
+  "Code goes brrrrrrrr!",
+  "Rust & Javascript for life!",
+  "Lemme grub that OSS!",
+  "@Kelbaz@mastodon.social :P",
+  "Imagine starting indexes at 1 lol",
 }
+
+math.randomseed(os.time())
+local random = math.random(#SENTENCES)
+local result = SENTENCES[random]
+
+vim.notify(result, vim.log.levels.INFO)

@@ -7,9 +7,12 @@ return {
   "AstroNvim/astrocommunity",
 
   -- Recipes
-  -- { import = "astrocommunity.recipes.neo-tree-dark" },
+  { import = "astrocommunity.recipes.neo-tree-dark" },
   { import = "astrocommunity.recipes.heirline-vscode-winbar" },
-  -- { import = "astrocommunity.completion.codeium-nvim" }, -- NOTE: Removed because buggy.
+  { import = "astrocommunity.completion.codeium-nvim" }, -- NOTE: Removed because buggy.
+
+  { import = "astrocommunity.terminal-integration.flatten-nvim" },
+  { import = "astrocommunity.workflow.bad-practices-nvim" },
 
   -- Completion
   { import = "astrocommunity.completion.cmp-calc" },
