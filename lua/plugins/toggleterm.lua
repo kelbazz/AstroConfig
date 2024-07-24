@@ -6,6 +6,5 @@ return {
   ---@diagnostic disable: missing-fields
   opts = {
     direction = "horizontal",
-    shell = "powershell",
   },
 }
